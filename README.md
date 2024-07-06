@@ -77,7 +77,7 @@ The application is deployed to Firebase CDN. To deploy your own version:
 1. Install Firebase CLI:
 
 ```bash
-yarn add -g firebase-tools
+yarn global add firebase-tools
 ```
 
 2. Login to Firebase:
