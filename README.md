@@ -1,30 +1,105 @@
-# React + TypeScript + Vite
+# Market Data Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Market Data Dashboard built with React, TypeScript, and Ant Design, using Redux Toolkit for state management and CodeMirror for displaying code snippets. The app fetches market data from the CoinGecko API and supports theme switching.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display market data in a table
+- Pagination and page size options
+- Filters for market data
+- Theme switching between light and dark mode
+- Display source code with CodeMirror
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: React, TypeScript, Ant Design, Vite
+- **State Management**: Redux Toolkit
+- **API**: CoinGecko API
+- **Code Editor**: CodeMirror
+- **Deployment**: Firebase CDN
 
-- Configure the top-level `parserOptions` property like this:
+## Setup
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Prerequisites
+
+- Node.js
+- Yarn package manager
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/OliinykViktor/cryptoDashboard.git
+cd market-data-dashboard
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install dependencies:
+
+```bash
+yarn install
+```
+
+3. Start the development server:
+
+```bash
+yarn dev
+```
+
+4.Open your browser and navigate to http://localhost:5173/.
+
+## Project Structure
+
+- **src/: Contains all the source code**
+- **app/: Redux store configuration and slices**
+- **view/: Page components**
+- **shared/: Reusable components, shared models, utilities, and constants**
+- **types/: TypeScript type definitions**
+
+## Usage
+
+### Market Data
+
+The market data is fetched from the CoinGecko API. You can filter the data using the filters provided and paginate through the results.
+
+### Theme Switching
+
+Use the theme switcher to toggle between light and dark themes.
+
+### Code Snippets
+
+The source code for components is displayed using CodeMirror. You can view the code for each component directly in the application.
+
+## Deployment
+
+The application is deployed to Firebase CDN. To deploy your own version:
+
+1. Install Firebase CLI:
+
+```bash
+yarn add -g firebase-tools
+```
+
+2. Login to Firebase:
+
+```bash
+firebase login
+```
+
+3. Initialize Firebase in your project directory:
+
+```bash
+firebase init
+```
+
+4.Deploy to Firebase:
+
+```bash
+firebase deploy
+```
+
+## Acknowledgements
+
+- [CoinGecko](https://www.coingecko.com/en/api) API for market data
+- [Ant Design](https://ant.design/) for UI components
+- [CodeMirror](https://codemirror.net/) for the code editor
