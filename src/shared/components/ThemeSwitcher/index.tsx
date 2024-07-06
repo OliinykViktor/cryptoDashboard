@@ -15,10 +15,17 @@ const ThemeSwitcher: FC = () => {
   };
 
   return (
-    <Button type='primary' onClick={toggleTheme}>
+    <Button type='primary' onClick={toggleTheme} style={style.btn}>
       {scheme.toUpperCase()}
     </Button>
   );
 };
 
 export default ThemeSwitcher;
+
+const style = {
+  btn: {
+    marginLeft: 'auto',
+    marginRight: 0,
+  }
+}

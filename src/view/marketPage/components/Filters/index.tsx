@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { CustomSelect } from "../../../../shared/components";
-import { COINS_FILTERS } from "../../../../shared/models/markerPage";
-import { Currency, FiltersMarketsProps, Order } from "../../../../types";
+import { CustomSelect } from '../../../../shared/components';
+import { COINS_FILTERS } from '../../../../shared/models/markerPage';
+import { Currency, FiltersMarketsProps, Order } from '../../../../types';
 
 const Filters: FC<FiltersMarketsProps> = ({
   currentQSParams,
@@ -41,15 +41,14 @@ export default Filters;
 const styles = {
   wrapper: {
     display:'flex',
-    marginBottom: 20
+    gap:24,
   },
   currencySelect: {
     width: 120,
-    marginRight: 20,
-    textAlign: "left",
+    textAlign: 'left',
   },
   orderSelect: {
     width: 180,
-    textAlign: "left"
+    textAlign: 'left'
   }
 };

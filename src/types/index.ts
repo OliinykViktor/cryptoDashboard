@@ -5,22 +5,22 @@ export interface Market {
   symbol: string;
   name: string;
   image: string;
-  current_price: number;
+  current_price: string;
   market_cap: number;
   market_cap_rank: number;
   fully_diluted_valuation: number;
   total_volume: number;
   high_24h: number;
   low_24h: number;
-  price_change_24h:number;
+  price_change_24h: number;
   price_change_percentage_24h: number;
   market_cap_change_24h: number;
   market_cap_change_percentage_24h: number;
-  circulating_supply:number;
+  circulating_supply: number;
   total_supply: number;
   max_supply: number;
   ath: number;
-  ath_change_percentage:number;
+  ath_change_percentage: number;
   ath_date: string;
   atl: number;
   atl_change_percentage: number;
@@ -35,19 +35,20 @@ export interface MarketsState {
 }
 
 export interface ThemeState {
-  currentTheme: 'dark' | 'light';
+  currentTheme: "dark" | "light";
 }
 
 export interface FetchMarketsParams {
-  page: number; 
-  currency?:'USD' | 'EUR'; 
-  order?:'Market_cap_desc'| 'Market_cap_asc';
+  page: number;
+  currency?: "USD" | "EUR";
+  order?: "Market_cap_desc" | "Market_cap_asc";
+  per_page: 5 | 10 | 20 | 50 | 100;
 }
 
 export interface CodeModalProps {
   isOpenModal: boolean;
   toggleModal: () => void;
-} 
+}
 
 export interface CustomSelectProps<T> {
   value: T;
@@ -58,11 +59,12 @@ export interface CustomSelectProps<T> {
 
 export interface RenderColumnsProps<T> {
   columns: TableColumnType<T>[];
+  currency: Currency;
 }
 
 export interface FiltersMarketsProps {
-  currentQSParams: FetchMarketsParams; 
-  setCurrentQSParams: React.Dispatch<React.SetStateAction<FetchMarketsParams>>
+  currentQSParams: FetchMarketsParams;
+  setCurrentQSParams: React.Dispatch<React.SetStateAction<FetchMarketsParams>>;
 }
 
 export enum Currency {
@@ -73,4 +75,12 @@ export enum Currency {
 export enum Order {
   MarketCapDesc = "Market_cap_desc",
   MarketCapAsc = "Market_cap_asc",
+}
+
+export enum PerPage {
+  Five = 5,
+  Ten = 10,
+  Twenty = 20,
+  Fifty = 50,
+  Hundred = 100
 }
