@@ -1,4 +1,5 @@
 export const codeMirrorsMockData = `
+github: https://github.com/OliinykViktor/cryptoDashboard
 
 //src/app/redux/slices/marketsSlice.ts
 
