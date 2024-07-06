@@ -1,4 +1,6 @@
 :root {
+  margin: 0 auto;
+  text-align: center;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -23,11 +25,14 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  margin: 0 auto;
   min-height: 100vh;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme {
+  background: #213547;
 }
 
 h1 {
@@ -55,6 +60,7 @@ button:focus-visible {
 }
 
 @media (prefers-color-scheme: light) {
+  /* Додаткові стилі для світлого колірної схеми */
   :root {
     color: #213547;
     background-color: #ffffff;
